@@ -11,7 +11,7 @@ RM =			rm -f
 
 CC =			gcc
 
-NAME =			printf.a
+NAME =			ft_printf.a
 
 CFLAGS =		-Wall -Wextra -Werror
 
