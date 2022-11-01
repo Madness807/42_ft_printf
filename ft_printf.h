@@ -3,15 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jo <jo@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: joterret <joterret@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 04:01:24 by jo                #+#    #+#             */
-/*   Updated: 2022/10/29 05:00:41 by jo               ###   ########.fr       */
+/*   Updated: 2022/11/01 14:11:21 by joterret         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PRINTF_H
 
+#include "libft.h"
+
+int		print_int();
+char	print_char();
+
+char 
 
 
 
