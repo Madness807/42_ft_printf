@@ -6,7 +6,7 @@
 /*   By: joterret <joterret@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 03:24:00 by jo                #+#    #+#             */
-/*   Updated: 2022/11/01 18:25:40 by joterret         ###   ########.fr       */
+/*   Updated: 2022/11/01 19:11:41 by joterret         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,30 @@
 #include <stdio.h>
 #include <stdarg.h>
 
-int	ft_printchar(char c)
+int	ft_printchar(int c)
 {	
 	write(1, &c, 1);
+	return (1);
+}
+
+int ft_printstr(char *str)
+{
+	int i;
+
+	i = 0;
+	while (str[i])
+	{
+		write(1, &str[i], 1);
+		i++;
+	}
+	return (i);
+}
+
+int ft_printint(int c)
+{
+	int cul = c +48;
+
+	write(1, &cul, 1);
 	return (1);
 }
 
@@ -25,15 +46,16 @@ int checkstr(va_list largs, char c)
 	int count;
 	
 	if(c == 'c')
-	count = ft_printchar(va_arg(largs, char));
-/*	if(c == 's')
-		ft_printstring(va_arg(largs, char *), c);
-	
-	if(c == 'd')
-		ft_printint(va_arg(largs, int))
-	if(c == 'i')
+	count = ft_printchar(va_arg(largs, int));
 
-	if(c == 'x')
+	if(c == 's')
+	count = ft_printstr(va_arg(largs, char*));
+
+	//if(c == 'd')
+		
+	if(c == 'i')
+		ft_printint(va_arg(largs, int));
+/*	if(c == 'x')
 
 	if(c == 'X')
 
@@ -59,7 +81,7 @@ int ft_printf(const char *str, ...)
 		if (str[i] == '%')
 		{
 			checkstr(largs, str[i + 1]);
-			
+			i++;
 		}	
 		else
 			count = count + ft_printchar(str[i]);
@@ -78,10 +100,10 @@ int main()
     char *str = "salut ca va ?";
 //--------------------------------------------------------------------VRAI_PRINTF------------
     printf("Affiche un seul caractère:  %c\n", c);
-    //printf("Affiche une chaîne de caractères:  %s\n", str);
+    printf("Affiche une chaîne de caractères:  %s\n", str);
     //printf("VF:  %p\n", c);   ??
     //printf("Affiche un nombre décimal (base 10):  %d\n", nombre);
-    //printf("Affiche un entier en base 10:  %i\n", nombre);
+    printf("Affiche un entier en base 10:  %i\n", nombre);
     //printf("Affiche un nombre décimal non signé (base 10):  %u\n", unbr);
     //printf("Affiche un nombre en hexadécimal (base 16) avec des lettres minuscules.:  %x\n", c);
     //printf("Affiche un nombre en hexadécimal (base 16) avec des lettres majuscules.:  %X\n", c);
@@ -90,13 +112,13 @@ int main()
 
 //--------------------------------------------------------------------42_PRINTF
 
-    ft_printf("Affiche un seul caractère:  %c\n", c);
-    //ft_printf("Affiche une chaîne de caractères:  %s\n", str);
-    //ft_printf("VF:  %p\n", c);
-    //ft_printf("Affiche un nombre décimal (base 10):  %d\n", nombre);
-    //ft_printf("Affiche un entier en base 10:  %i\n", nombre);
-    //ft_printf("Affiche un nombre décimal non signé (base 10):  %u\n", unbr);
-    //ft_printf("Affiche un nombre en hexadécimal (base 16) avec des lettres minuscules.:  %x\n", c);
-    //ft_printf("Affiche un nombre en hexadécimal (base 16) avec des lettres majuscules.:  %X\n", c);
-    //ft_printf("Affiche un signe pourcentage %%\n", c);  
+    ft_printf("version 42:  %c\n", c);
+    ft_printf("version 42  %s\n", str);
+    //ft_printf("version 42  %p\n", c);
+    //ft_printf("version 42  %d\n", nombre);
+    ft_printf("version 42  %i\n", nombre);
+    //ft_printf("version 42  %u\n", unbr);
+    //ft_printf("version 42  %x\n", c);
+    //ft_printf("version 42  %X\n", c);
+    //ft_printf("version 42  %%\n", c);  
 }
