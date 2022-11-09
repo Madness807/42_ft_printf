@@ -1,17 +1,19 @@
-SRCS =		
+NAME =			libftprintf.a
 
+SRCS =	ft_printf.c\
+		./utils/ft_printchar.c\
+		./utils/ft_printstr.c\
+		./utils/ft_printchar.c\
+		./utils/ft_printint.c\
+		./utils/ft_checkstr.c
 
 OBJS =			${SRCS:.c=.o}
-
-OBJS_BONUS =	${BONUS:.c=.o}
 
 INCLUDES =		includes/
 
 RM =			rm -f
 
 CC =			gcc
-
-NAME =			ft_printf.a
 
 CFLAGS =		-Wall -Wextra -Werror
 

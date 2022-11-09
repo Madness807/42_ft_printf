@@ -1,38 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_checkstr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jo <jo@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/29 03:24:00 by jo                #+#    #+#             */
-/*   Updated: 2022/11/09 11:16:25 by jo               ###   ########.fr       */
+/*   Created: 2022/11/09 10:13:26 by jo                #+#    #+#             */
+/*   Updated: 2022/11/09 12:44:39 by jo               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
-int ft_printf(const char *str, ...)
+int checkstr(va_list largs, char c)
 {
-	va_list	largs;
-	int i;
 	int count;
+	
+	if(c == 'c')
+		count = ft_printchar(va_arg(largs, int));
 
-	i = 0;
-	count = 0;
-	va_start(largs, str);
-	while (str[i])
-	{	
-		if (str[i] == '%')
-		{
-			count = count + checkstr(largs, str[i + 1]);
-			i++;
-		}	
-		else
-			count = count + ft_printchar(str[i]);
-		i++;
-	}
-	va_end(largs);
+	if(c == 's')
+		count = ft_printstr(va_arg(largs, char*));
+
+	if(c == 'd' || c == 'i')
+		return (0);
+		//count = ft_printint(va_arg(largs, int));*/
+
+	//if(c == 'x')
+
+	//if(c == 'X')
+
+	//if(c == 'p')
+		
+	//if(c == '%')
+
 	return (count);
 }
-
