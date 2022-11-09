@@ -6,13 +6,13 @@
 /*   By: jo <jo@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 07:08:27 by jo                #+#    #+#             */
-/*   Updated: 2022/11/09 12:51:03 by jo               ###   ########.fr       */
+/*   Updated: 2022/11/09 12:56:59 by jo               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-int	ft_printchar(int c)
+int	ft_print_char(int c)
 {	
 	write(1, &c, 1);
 	return (1);

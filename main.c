@@ -6,7 +6,7 @@
 /*   By: jo <jo@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 10:32:12 by jo                #+#    #+#             */
-/*   Updated: 2022/11/09 12:37:59 by jo               ###   ########.fr       */
+/*   Updated: 2022/11/09 13:13:10 by jo               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int main()
 	printf("return %d✅\n",ft_printf("42 Affiche une chaîne de caractères: %s // ", str));
 	printf("\n");
 //---------------------------------------------------------------------------------------------*void
-    printf("return %d🚧\n",printf("VF Pointeur sur void: %p // ", &vptr));
+    printf("return %d✅\n",printf("VF Pointeur sur void: %p // ", &vptr));
 	printf("return %d🚧\n",ft_printf("42 Pointeur sur void: %p // ", &vptr));
 	printf("\n");
 //---------------------------------------------------------------------------------------------intb10
