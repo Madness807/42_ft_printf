@@ -6,17 +6,17 @@
 /*   By: jo <jo@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 03:24:00 by jo                #+#    #+#             */
-/*   Updated: 2022/11/09 13:02:46 by jo               ###   ########.fr       */
+/*   Updated: 2022/11/09 14:11:27 by jo               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_printf(const char *str, ...)
+int	ft_printf(const char *str, ...)
 {
 	va_list	largs;
-	int i;
-	int count;
+	int		i;
+	int		count;
 
 	i = 0;
 	count = 0;
@@ -35,4 +35,3 @@ int ft_printf(const char *str, ...)
 	va_end(largs);
 	return (count);
 }
-

@@ -4,7 +4,9 @@ SRCS =	ft_printf.c\
 		./utils/ft_print_char.c\
 		./utils/ft_print_str.c\
 		./utils/ft_print_int.c\
-		./utils/ft_print_addr.c\
+		./utils/ft_print_hex.c\
+		./utils/ft_print_pourcent.c\
+		./utils/ft_print_uint.c\
 		./utils/ft_checkstr.c
 
 OBJS =			${SRCS:.c=.o}

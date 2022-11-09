@@ -6,15 +6,15 @@
 /*   By: jo <jo@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 07:18:58 by jo                #+#    #+#             */
-/*   Updated: 2022/11/09 13:02:12 by jo               ###   ########.fr       */
+/*   Updated: 2022/11/09 14:32:56 by jo               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-int ft_print_str(char *str)
+int	ft_print_str(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i])
