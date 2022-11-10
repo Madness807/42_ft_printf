@@ -6,7 +6,7 @@
 /*   By: joterret <joterret@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 12:57:01 by jo                #+#    #+#             */
-/*   Updated: 2022/11/10 22:17:45 by joterret         ###   ########.fr       */
+/*   Updated: 2022/11/10 22:21:07 by joterret         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,11 @@ int	ft_putnbr_b16(unsigned long long nb, char format)
 }
 
 
+//itoa(420, "0123456489")
+//itoa(420, "0123456789abcdef")
+//itoa(420, "0123456789ABCDEF")
+
 char	*itoa(int nb, char *base)
 {
-	int base_len 
+	int base_len = ft_strlen(base);
 }
