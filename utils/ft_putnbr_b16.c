@@ -6,13 +6,13 @@
 /*   By: joterret <joterret@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 12:57:01 by jo                #+#    #+#             */
-/*   Updated: 2022/11/10 22:21:07 by joterret         ###   ########.fr       */
+/*   Updated: 2022/11/11 19:17:23 by joterret         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-int	ft_putnbr_b16(unsigned long long nb, char format)
+int	ft_putnbr_b16(unsigned int nb, char format)
 {
 	int	count;
 
@@ -29,18 +29,8 @@ int	ft_putnbr_b16(unsigned long long nb, char format)
 	}
 	if (nb <= 9)
 	{
-		ft_putchar_fd(nb, 1);
+		ft_putchar_fd(nb + '0', 1);
 		count = count + 1;
 	}
 	return (count);
-}
-
-
-//itoa(420, "0123456489")
-//itoa(420, "0123456789abcdef")
-//itoa(420, "0123456789ABCDEF")
-
-char	*itoa(int nb, char *base)
-{
-	int base_len = ft_strlen(base);
 }

@@ -5,6 +5,7 @@ SRCS =	ft_printf.c\
 		./utils/ft_print_str.c\
 		./utils/ft_putnbr_b10.c\
 		./utils/ft_putnbr_b16.c\
+		./utils/ft_putnbr_addb16.c\
 		./utils/ft_print_pourcent.c\
 		./utils/ft_putnbr_ub10.c\
 		./utils/ft_checkstr.c\
